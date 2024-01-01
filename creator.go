@@ -56,6 +56,7 @@ func (c *Config) create_template(new_raw http.Request, newDumpRequest []byte, in
 			if errDir != nil {
 				log.Fatal(err)
 			}
+			fmt.Println("success create", c.Key)
 		}
 		file, err := os.Create("/tmp/" + c.Key + "/" + nucleiPATH + ".yaml")
 		if err != nil {
